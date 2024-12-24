@@ -10,6 +10,7 @@ write in your cofigartion file is correct or not.
 
 terraform plan
 it is going to execute your plan. it is going to read our current state file 
+terrafrom plan -out myplan  this is nothing assigning a name for your plan.
 
 terraform apply
 this is will execute all our actions
@@ -20,3 +21,4 @@ this is going to destory the resource what we have in our state file.
 
 how to create a configartion file
 got to terraform folder and create file main.tf tf is nothing but terraform 
+
