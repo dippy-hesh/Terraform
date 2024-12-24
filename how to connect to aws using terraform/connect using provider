@@ -1,0 +1,55 @@
+first go to aws conscole and IAM 
+create a user and assign policy to him 
+once user is created go to security cerdentials section in am for that user
+and create a access key 
+open the vs code and go to terraform folder and open terminal
+
+for windows
+
+ $Env:AWS_ACCESS_KEY_ID="" 
+ $Env:AWS_SECRET_ACCESS_KEY="" 
+ $Env:AWS_DEFAULT_REGION="us-east-1"
+
+  for linux and windows:
+ export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+export AWS_DEFAULT_REGION=us-east-1
+
+another we can mention key and id in main.tf file
+
+provider "aws" {
+region = "us-east-2"
+access_key = ""
+secret_key = ""
+}
+
+
+another way  instead keeping value in main.tf we can keep them in variable.tf files 
+ create a vraibale.tf file
+
+variable access_key {
+type = string
+default = "keepy your acces key"
+description = "this is my acces key"
+}
+
+
+variable secert_key {
+type = string
+default = "your secret key"
+description = "this is my secret key"
+}
+
+now go to your main,tf files
+
+provider "aws" {
+region = "us-ease-2"
+access_key = var.access_key
+secret_key= var.aceret_key
+}
+ 
+
+
+another way
+
+ aws configure --profile dippy     --- this will work for windows unix and linux and mac this more secure way
