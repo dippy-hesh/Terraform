@@ -13,3 +13,7 @@ A Terraform module is a set of Terraform configuration files in a single directo
 ├── main.tf
 ├── variables.tf
 ├── outputs.tf
+
+
+terraform provider
+provider will allow terraform how to interact with remote system
