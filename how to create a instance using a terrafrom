@@ -10,3 +10,4 @@ resource "aws_instance" "rama" {
 
 }
   
+rama is the name we gave in terraform it not the name in aws 
