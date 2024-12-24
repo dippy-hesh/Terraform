@@ -1,0 +1,22 @@
+terraform init
+it is first command you run when your going to create a configration file. it can be run many time because it never touches the state file or configartion file. 
+along to that it will download the required plugins to execute our configartion files. 
+when you run terraform init command it will create a lock file and provider file
+
+
+teeraform validate 
+this command will validate the configartion file in the current working directory it going to check and validate the synatx mean it will validate the viarble which you
+write in your cofigartion file is correct or not.
+
+terraform plan
+it is going to execute your plan. it is going to read our current state file 
+
+terraform apply
+this is will execute all our actions
+
+terraform destory
+this is going to destory the resource what we have in our state file.
+
+
+how to create a configartion file
+got to terraform folder and create file main.tf tf is nothing but terraform 
