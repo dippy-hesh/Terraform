@@ -1,0 +1,1 @@
+terraform is going to use resource block to create a infrastructure without resource blcok we cant create a anything . each resource block will represet one or more objects 
