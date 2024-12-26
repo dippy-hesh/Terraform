@@ -5,3 +5,27 @@ security group can be created in vpc oe EC2 level. it acts as firewall for your 
 
   when you create a security group things we required are like vpc , port, proctocol, cidr_blocks
   cidr is nothing but class less domain range it is private ips
+
+
+provider "aws" {
+    region = "us-east-2"
+    aws_access_key = ""
+    aws_secret_key = ""
+}
+
+resource "aws_security_group" "mysecuritygroup" {
+    name = "new security group"
+    description = "this allow inbound and outbound traffic"
+    vpc_id = "aws_vpc.my_vpc.id"
+
+    ingress {
+        from_port = 443
+        to_port = 443
+        protocol = "tcp"
+        cidr_blocks = {"0.0.0.0/0"}
+    }
+  
+}
+
+
+  
