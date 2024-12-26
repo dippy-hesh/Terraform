@@ -1,0 +1,7 @@
+creating a security groups  we will take aws 
+
+security group can be created in vpc oe EC2 level. it acts as firewall for your ec2 instance and it allow inbound and outbound traffic based on ports you specify.
+  and proctocol as well like tcp http etc.
+
+  when you create a security group things we required are like vpc , port, proctocol, cidr_blocks
+  cidr is nothing but class less domain range it is private ips
