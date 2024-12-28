@@ -52,4 +52,7 @@ secret_key= var.aceret_key
 
 another way
 
- aws configure --profile dippy     --- this will work for windows unix and linux and mac this more secure way
+ aws configure --profile ds
+     --- this will work for windows unix and linux and mac this more secure way
+ 
+
