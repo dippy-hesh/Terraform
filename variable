@@ -1,0 +1,2 @@
+we define variable inside variable.tf file. variables are defined inside the virable block and then we are going to give a vraible name. variable name should be uniqe.
+you should not mention same again in variable file. in viable you will mention type description and default value
