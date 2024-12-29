@@ -1,0 +1,6 @@
+in ip we have 2 ipv4 and ipv6
+ipv is nothing but internet protcol version
+
+ipv4 is 10.0.0.1 they are sepreated by . they has numbers  it is 32 bit address  each bit is 8 mean octact 4*8= 32
+ipv6 is 12df:hi38:hdi8:73hk:89jd:02ds  they are number and alphbets it is 128 bit address  6*8=128
+for subnet in ipv4 we give /24
