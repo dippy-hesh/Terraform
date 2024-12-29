@@ -1,3 +1,63 @@
 we define variable inside variable.tf file. variables are defined inside the virable block and then we are going to give a vraible name. variable name should be uniqe.
 you should not mention same again in variable file. in viable you will mention type description and default value
 
+
+
+
+provider "aws" {
+    access_key = ""
+    secret_key = ""
+    region = "us-east-1"
+}
+
+resource "aws_security_group" "king" {
+    name = "creating"
+    description = "creating security group"
+
+    ingress  {
+        from_port = var.variable_from_port
+        to_port = var.variable_to_port
+        protocol = var.variable_protocol
+        cidr_blocks = [var.variable_cidr_blocks]
+
+    }
+}
+
+    resource "aws_instance" "ok"{
+        ami = var.variable_ami
+        instance_type = var.variable_instance_type
+        vpc_security_group_ids = [aws_security_group.king.id]
+    }
+
+  
+
+variable "variable_from_port" {
+    description = "from_port"
+    type = string 
+}
+
+variable "variable_to_port" {
+    description = "this is to_port"
+    type = string
+}
+
+variable "variable_protocol" {
+    description = "this is protocol"
+    type = string
+}
+
+variable "variable_cidr_blocks" {
+    description = "this is cidr"
+    type = string
+}
+
+variable "variable_ami" {
+    description = "this is string"
+    type = string
+}
+
+variable "variable_instance_type" {
+    description = "this is instance"
+    type = string
+}
+
