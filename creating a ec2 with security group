@@ -1,0 +1,31 @@
+provider "aws" {
+    region = "us-east-1"
+    access_key = var.access_key
+    secret_key = var.secret_key
+  
+}
+
+resource "aws_instance" "name_2" {
+    ami = "ami-01816d07b1128cd2d"
+    instance_type = "t2.micro"
+
+    vpc_security_group_ids = [aws_security_group.new.id]
+
+    tags = {
+        name = "we"
+    }
+  
+}
+
+resource "aws_security_group" "new" {
+    name = "ec2_security"
+    description = "creating new security group"
+
+    ingress  {
+        from_port = 443
+        to_port = 443
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+  
+}
