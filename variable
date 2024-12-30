@@ -61,3 +61,11 @@ variable "variable_instance_type" {
     type = string
 }
 
+
+
+
+locals:
+locals are similar to vairable we have 2 types in locals static and dynamic 
+static is nothing but passing the vlaue in configure file.   dynamic means you will in local from var file . we can have multiple local blocks
+each block has 1 or more variable. usually they keep locals on the top of your code.
+
